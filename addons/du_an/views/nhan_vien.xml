@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Danh sách Nhân Viên (Tree View) -->
+    <record id="view_nhan_vien_tree" model="ir.ui.view">
+        <field name="name">nhan_vien.tree</field>
+        <field name="model">nhan_vien</field>
+        <field name="arch" type="xml">
+            <tree string="Danh sách Nhân Viên">
+                <field name="ma_nhan_vien"/>
+                <field name="ten_nhan_vien"/>
+                <field name="chuc_vu"/>
+                <field name="du_an_ids"/>
+                <field name="so_dien_thoai"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form chi tiết nhân viên -->
+    <record id="view_nhan_vien_form" model="ir.ui.view">
+        <field name="name">nhan_vien.form</field>
+        <field name="model">nhan_vien</field>
+        <field name="arch" type="xml">
+            <form string="Thông Tin Nhân Viên">
+                <sheet>
+                    <group>
+                        <field name="ma_nhan_vien" readonly="1"/>
+                        <field name="ten_nhan_vien"/>
+                        <field name="chuc_vu"/>
+                        <field name="so_dien_thoai"/>
+                        <field name="ngay_sinh"/>
+                        <field name="can_cuoc_cong_dan"/>
+                        <field name="dia_chi"/>
+                        <field name="du_an_ids" widget="many2many_tags"/>
+                    </group>
+                    <group>
+                        <field name="anh_nhan_vien" widget="image"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tìm kiếm nhân viên -->
+    <record id="view_nhan_vien_search" model="ir.ui.view">
+        <field name="name">nhan_vien.search</field>
+        <field name="model">nhan_vien</field>
+        <field name="arch" type="xml">
+            <search string="Tìm Kiếm Nhân Viên">
+                <field name="ma_nhan_vien"/>
+                <field name="ten_nhan_vien"/>
+                <field name="chuc_vu"/>
+                <field name="so_dien_thoai"/>
+                <filter name="filter_nhan_vien" string="Nhân Viên" domain="[('chuc_vu', '=', 'nhan_vien')]"/>
+                <filter name="filter_quan_ly" string="Quản Lý" domain="[('chuc_vu', '=', 'quan_ly')]"/>
+                <filter name="filter_giam_doc" string="Giám Đốc" domain="[('chuc_vu', '=', 'giam_doc')]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Menu quản lý nhân viên -->
+    <menuitem id="menu_nhan_vien_root" name="Quản Lý Nhân Viên" sequence="1"/>
+    
+    <menuitem id="menu_nhan_vien" name="Nhân Viên" parent="menu_nhan_vien_root" action="action_nhan_vien"/>
+
+    <!-- Action hiển thị danh sách nhân viên -->
+    <record id="action_nhan_vien" model="ir.actions.act_window">
+        <field name="name">Nhân Viên</field>
+        <field name="res_model">nhan_vien</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

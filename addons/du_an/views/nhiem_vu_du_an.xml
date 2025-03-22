@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_nhiem_vu_du_an_form" model="ir.ui.view">
+            <field name="name">nhiem_vu_du_an.form</field>
+            <field name="model">nhiem_vu_du_an</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h2>Nhiệm Vụ Dự Án</h2>
+                        <group>
+                            <group col="2" string="Thông tin chung">
+                                <field name="du_an_id" required="1"/>
+                                <field name="bao_cao_id" required="1"/>
+                                <field name="tieu_de" required="1"/>
+                                <field name="mo_ta"/>
+                            </group>
+                            <group col="2" string="Trạng thái">
+                                <field name="trang_thai"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_nhiem_vu_du_an_tree" model="ir.ui.view">
+            <field name="name">nhiem_vu_du_an.tree</field>
+            <field name="model">nhiem_vu_du_an</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="tieu_de"/>
+                    <field name="du_an_id"/>
+                    <field name="bao_cao_id"/>
+                    <field name="trang_thai"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="nhiem_vu_du_an_search">
+            <field name="model">nhiem_vu_du_an</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="tieu_de"/>
+                    <field name="du_an_id"/>
+                    <field name="bao_cao_id"/>
+                    <field name="trang_thai"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_nhiem_vu_du_an" model="ir.actions.act_window">
+            <field name="name">Nhiệm Vụ Dự Án</field>
+            <field name="res_model">nhiem_vu_du_an</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="nhiem_vu_du_an_search"/>
+        </record>
+    </data>
+</odoo>

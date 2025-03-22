@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_phuong_tien_form" model="ir.ui.view">
+            <field name="name">phuong_tien</field>
+            <field name="model">phuong_tien</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">Phương tiện</div>
+                        <group col="4" string="Thông tin chung">
+                            <field name="ma_dinh_danh_phuong_tien"/>
+                            <field name="ten_chu_xe"/>
+                            <field name="ten_phuong_tien"/>        
+                            <field name="ngay_mua_xe"/>
+                            <field name="dia_chi"/>
+                            <field name="nhan_hieu"/>
+                            <field name="mau_son"/>
+                            <field name="bien_so_dang_ky"/>
+                            <field name="dang_ky_lan_dau_ngay"/>
+                            <field name="so_may"/>
+                            <field name="so_khung"/>
+                            <field name="dung_tich"/>
+                            <field name="email"/>
+                            <field name="so_dien_thoai"/>
+                            <field name="gia_cho_thue_theo_gio"/>
+                            <field name="gia_cho_thue_theo_ngay"/>
+                            <field name="gia_ban_xe"/>
+                            <field name="hop_dong_mua_ban_xe"/>
+                            <field name="tinh_trang_xe"/>
+                            <field name="hinh_anh_xe_mot" widget="image"/>
+                            <field name="hinh_anh_xe_hai" widget="image"/>
+                            <field name="hinh_anh_xe_ba" widget="image"/>
+                             <field name="hinh_anh_xe_bon" widget="image"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_phuong_tien_tree" model="ir.ui.view">
+            <field name="name">phuong_tien</field>
+            <field name="model">phuong_tien</field>
+            <field name="arch" type="xml">
+                <tree>
+                           <field name="ma_dinh_danh_phuong_tien"/>
+                            <field name="ten_chu_xe"/>
+                            <field name="ten_phuong_tien"/>        
+                            <field name="ngay_mua_xe"/>
+                            <field name="dia_chi"/>
+                            <field name="nhan_hieu"/>
+                            <field name="mau_son"/>
+                            <field name="bien_so_dang_ky"/>
+                            <field name="dang_ky_lan_dau_ngay"/>
+                            <field name="so_may"/>
+                            <field name="so_khung"/>
+                            <field name="dung_tich"/>
+                            <field name="email"/>
+                            <field name="so_dien_thoai"/>
+                            <field name="gia_cho_thue_theo_gio"/>
+                            <field name="gia_cho_thue_theo_ngay"/>
+                            <field name="gia_ban_xe"/>
+                            <field name="hop_dong_mua_ban_xe"/>
+                            <field name="tinh_trang_xe"/>
+                            <field name="hinh_anh_xe_mot" widget="image"/>
+                            <field name="hinh_anh_xe_hai" widget="image"/>
+                            <field name="hinh_anh_xe_ba" widget="image"/>
+                             <field name="hinh_anh_xe_bon" widget="image"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="phuong_tien_search">
+            <field name="model">phuong_tien</field>
+            <field name="arch" type="xml">
+                <search>
+                              <field name="ma_dinh_danh_phuong_tien"/>
+                            <field name="ten_chu_xe"/>
+                            <field name="ten_phuong_tien"/>        
+                            <field name="ngay_mua_xe"/>
+                            <field name="dia_chi"/>
+                            <field name="nhan_hieu"/>
+                            <field name="mau_son"/>
+                            <field name="bien_so_dang_ky"/>
+                            <field name="dang_ky_lan_dau_ngay"/>
+                            <field name="so_may"/>
+                            <field name="so_khung"/>
+                            <field name="dung_tich"/>
+                            <field name="email"/>
+                            <field name="so_dien_thoai"/>
+                            <field name="gia_cho_thue_theo_gio"/>
+                            <field name="gia_cho_thue_theo_ngay"/>
+                            <field name="gia_ban_xe"/>
+                            <field name="hop_dong_mua_ban_xe"/>
+                            <field name="tinh_trang_xe"/>
+                            <field name="hinh_anh_xe_mot" widget="image"/>
+                            <field name="hinh_anh_xe_hai" widget="image"/>
+                            <field name="hinh_anh_xe_ba" widget="image"/>
+                             <field name="hinh_anh_xe_bon" widget="image"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_phuong_tien" model="ir.actions.act_window">
+            <field name="name">Phương tiện</field>
+            <field name="res_model">phuong_tien</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref = "phuong_tien_search"/>
+        </record>
+    </data>
+</odoo>
+        
+    

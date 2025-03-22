@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_quan_ly_tai_xe_form" model="ir.ui.view">
+            <field name="name">view_quan_ly_tai_xe</field>
+            <field name="model">quan_ly_tai_xe</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">Quản lý tài xế</div>
+                        <group col="4" string="Thông tin tài xế">
+                            <field name="ma_dinh_danh_tai_xe"/>
+                            <field name="ten_tai_xe"/>
+                            <field name="ten_phuong_tien"/>        
+                            <field name="ngay_mua_xe"/>
+                            <field name="dia_chi"/>
+                            <field name="nhan_hieu"/>
+                            <field name="mau_son"/>
+                            <field name="bien_so_dang_ky"/>
+                            <field name="dang_ky_lan_dau_ngay"/>
+                            <field name="so_may"/>
+                            <field name="so_khung"/>
+                            <field name="dung_tich"/>
+                            <field name="email"/>
+                            <field name="so_dien_thoai"/>
+                            <field name="hinh_anh_tai_xe" widget="image"/>
+                            <field name="lich_lam_viec"/>      
+                            <field name="tinh_trang_xe"/>
+                            <field name="hinh_anh_xe_mot" widget="image"/>
+                            <field name="hinh_anh_xe_hai" widget="image"/>
+                            <field name="hinh_anh_xe_ba" widget="image"/>
+                             <field name="hinh_anh_xe_bon" widget="image"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_quan_ly_tai_xe_tree" model="ir.ui.view">
+            <field name="name">quan_ly_tai_xe</field>
+            <field name="model">quan_ly_tai_xe</field>
+            <field name="arch" type="xml">
+                <tree>
+                            <field name="ma_dinh_danh_tai_xe"/>
+                            <field name="ten_tai_xe"/>
+                            <field name="ten_phuong_tien"/>        
+                            <field name="ngay_mua_xe"/>
+                            <field name="dia_chi"/>
+                            <field name="nhan_hieu"/>
+                            <field name="mau_son"/>
+                            <field name="bien_so_dang_ky"/>
+                            <field name="dang_ky_lan_dau_ngay"/>
+                            <field name="so_may"/>
+                            <field name="so_khung"/>
+                            <field name="dung_tich"/>
+                            <field name="email"/>
+                            <field name="so_dien_thoai"/>
+                            <field name="hinh_anh_tai_xe" widget="image"/>
+                            <field name="lich_lam_viec"/>      
+                            <field name="tinh_trang_xe"/>
+                            <field name="hinh_anh_xe_mot" widget="image"/>
+                            <field name="hinh_anh_xe_hai" widget="image"/>
+                            <field name="hinh_anh_xe_ba" widget="image"/>
+                             <field name="hinh_anh_xe_bon" widget="image"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="quan_ly_tai_xe_search">
+            <field name="model">quan_ly_tai_xe</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="ma_dinh_danh_tai_xe"/>
+                            <field name="ten_tai_xe"/>
+                            <field name="ten_phuong_tien"/>        
+                            <field name="ngay_mua_xe"/>
+                            <field name="dia_chi"/>
+                            <field name="nhan_hieu"/>
+                            <field name="mau_son"/>
+                            <field name="bien_so_dang_ky"/>
+                            <field name="dang_ky_lan_dau_ngay"/>
+                            <field name="so_may"/>
+                            <field name="so_khung"/>
+                            <field name="dung_tich"/>
+                            <field name="email"/>
+                            <field name="so_dien_thoai"/>
+                            <field name="hinh_anh_tai_xe" widget="image"/>
+                            <field name="lich_lam_viec"/>      
+                            <field name="tinh_trang_xe"/>
+                            <field name="hinh_anh_xe_mot" widget="image"/>
+                            <field name="hinh_anh_xe_hai" widget="image"/>
+                            <field name="hinh_anh_xe_ba" widget="image"/>
+                             <field name="hinh_anh_xe_bon" widget="image"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_quan_ly_tai_xe" model="ir.actions.act_window">
+            <field name="name">Quản lý tài xế</field>
+            <field name="res_model">quan_ly_tai_xe</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref = "quan_ly_tai_xe_search"/>
+        </record>
+    </data>
+</odoo>
+        
+    

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem
+            id="menu_root"
+            name="QLDA"
+            sequence="0"/>
+          
+        <menuitem name="Quản lý dự án" 
+            id="menu_du_an" 
+            parent="menu_root" 
+            sequence="1"
+            action="action_du_an"/>
+        <menuitem name="Nhiệm vụ dự án" 
+            id="menu_nhiem_vu_du_an" 
+            parent="menu_root" 
+            sequence="5"
+            action="action_nhiem_vu_du_an"/>
+        <menuitem name="Báo cáo dự án" 
+            id="menu_bao_cao_du_an" 
+            parent="menu_root" 
+            sequence="2"
+            action="action_bao_cao_du_an"/>
+        <menuitem name="Tiến độ dự án" 
+            id="menu_tien_do_du_an" 
+            parent="menu_root" 
+            sequence="3"
+            action="action_tien_do_du_an"/>
+        <menuitem name="Biểu đồ dự án" 
+            id="menu_bieu_do_du_an" 
+            parent="menu_root" 
+            sequence="4"
+            action="action_bieu_do_du_an"/>
+        <menuitem name="Chi phí dự án" 
+            id="menu_chi_phi_du_an" 
+            parent="menu_root" 
+            sequence="6"
+            action="action_chi_phi_du_an"/>
+        <menuitem name="Nhân viên" 
+            id="menu_nhan_vien" 
+            parent="menu_root" 
+            sequence="7"
+            action="action_nhan_vien"/>
+    </data>
+</odoo>
